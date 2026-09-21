@@ -2,7 +2,7 @@
 
 Code and results for **NaDS**, a network-aware direct-search method for
 influence maximization on (normal, non-hyper) graphs, published in the
-*Journal of Complex Networks* (2025). Given a graph, a seed-set size `K` and a
+*Journal of Complex Networks* (2025), [doi:10.1093/comnet/cnaf042](https://doi.org/10.1093/comnet/cnaf042). Given a graph, a seed-set size `K` and a
 influence-propagation model, NaDS looks for the `K` seed nodes that
 maximise the total influence spread. It searches over neighbours of the current
 seeds in the network first, and falls back to a generic swap neighbourhood when
@@ -29,7 +29,7 @@ Across the code and result files, `NS` stands for NaDS.
   - `real_networks_comparison.py`: NaDS vs CDS and the baselines on one real network (one run per network).
   - `kcore_ci_baselines.py`: k-core and collective-influence baselines on all real networks.
   - `lfr_experiments.py`: comparison on artificial LFR graphs.
-- `data/`: the input networks (standard public benchmarks): Arxiv Astro, Arxiv Gr-Qc, Arxiv HepPh, Email-Enron, Facebook, Lastfm Asia.
+- `data/`: the input networks, all from the [SNAP](https://snap.stanford.edu/data/) network collection: Arxiv Astro, Arxiv Gr-Qc, Arxiv HepPh, Email-Enron, Facebook, Lastfm Asia.
 - `results/`: the results shown in the paper.
 
 ## Setup
@@ -116,3 +116,7 @@ the chosen nodes and `0` elsewhere.
 The `- Copia.csv` files in `Arxiv Astro/` and `Arxiv HeP-Ph/` are additional variants of `scores.csv` and `times.csv` that were part of the original upload. They differ from the current files, and their provenance is not documented.
 
 The scripts in `scripts/` write to `outputs/<network>/` with the same structure (plus a `baselines.csv` with the baseline scores and times).
+
+## Citation
+
+If you use this code or its results, please cite the paper: <https://doi.org/10.1093/comnet/cnaf042>.
